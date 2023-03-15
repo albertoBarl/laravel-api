@@ -22,6 +22,8 @@ use App\Http\Controllers\Api\ProjectController as ProjectController;
 Route::get("/projects", [ProjectController::class, "index"]);
 // single project detail
 Route::get("/projects/{slug}", [ProjectController::class, "show"]);
+// contacts
+// Route::post("/contacts", [::class, ""]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
