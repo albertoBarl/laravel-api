@@ -31,7 +31,7 @@ class GuestLeadController extends Controller
             ]);
         }
         $newContact = new GuestLead();
-        $newContact->fill($newContact);
+        $newContact->fill($form_data);
         $newContact->save();
 
         Mail::to("info@boolpress.com")->send(new GuestContact($newContact));

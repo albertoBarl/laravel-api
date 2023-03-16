@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 // controllers
 use App\Http\Controllers\Api\ProjectController as ProjectController;
+use App\Models\GuestLead;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get("/projects", [ProjectController::class, "index"]);
 // single project detail
 Route::get("/projects/{slug}", [ProjectController::class, "show"]);
 // contacts
-// Route::post("/contacts", [::class, ""]);
+Route::post("/contacts", [GuestLeadController::class, "store"]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
