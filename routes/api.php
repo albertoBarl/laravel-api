@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 // controllers
 use App\Http\Controllers\Api\ProjectController as ProjectController;
+use App\Http\Controllers\Api\GuestLeadController as GuestLeadController;
 use App\Models\GuestLead;
 
 /*

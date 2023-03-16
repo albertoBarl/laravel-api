@@ -32,7 +32,7 @@ class GuestContact extends Mailable
     {
         return new Envelope(
             subject: 'Guest request from form',
-            replyTo: $this->lead->email,
+            replyTo: "info@boolpress.com",
         );
     }
 
@@ -44,7 +44,7 @@ class GuestContact extends Mailable
     public function content()
     {
         return new Content(
-            view: 'email.guest_email',
+            view: 'emails.guest_email',
         );
     }
 
